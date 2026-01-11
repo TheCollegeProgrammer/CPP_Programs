@@ -55,6 +55,7 @@ int main() {
     word2 = "";
     cout << "Test 5: " << sol.mergeAlternately(word1, word2) << endl;
     // Expected: (empty string)
+// working nicely
 
     return 0;
 }
