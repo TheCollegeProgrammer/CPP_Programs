@@ -25,7 +25,7 @@ public:
 
 int main() {
     Solution sol;
-
+// test cases to check the code functionality
     // Test case 1
     string word1 = "abc";
     string word2 = "pqr";
