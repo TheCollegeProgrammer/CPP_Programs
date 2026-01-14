@@ -43,6 +43,6 @@ int main() {
     // Test case 5 (only spaces around one word)
     string s5 = "   leetcode   ";
     cout << sol.reverseWords(s5) << endl;   // Expected: "leetcode"
-
+    // end of test cases
     return 0;
 }
