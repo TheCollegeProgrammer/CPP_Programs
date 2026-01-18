@@ -1,0 +1,74 @@
+// Part 1: Define the building block (Node)
+CLASS Node
+    DECLARE data: Integer
+    DECLARE next: Node pointer
+
+    CONSTRUCTOR(value)
+        SET data = value
+        SET next = NULL
+    END CONSTRUCTOR
+END CLASS
+
+// Part 2: Define the List Manager
+CLASS LinkedList
+    DECLARE head: Node pointer
+
+    CONSTRUCTOR()
+        SET head = NULL
+    END CONSTRUCTOR
+
+    // Adds a new value to the front of the list
+    METHOD InsertAtBeginning(value)
+        SET newNode = NEW Node(value)
+        SET newNode.next = head
+        SET head = newNode
+    END METHOD
+
+    // Prints all elements from head to end
+    METHOD DisplayAll()
+        IF head IS NULL THEN
+            PRINT "List is empty"
+            RETURN
+        END IF
+
+        SET current = head
+        WHILE current IS NOT NULL
+            PRINT current.data
+            SET current = current.next
+        END WHILE
+    END METHOD
+
+    // Checks if a value exists in the list
+    METHOD Find(target)
+        SET current = head
+        WHILE current IS NOT NULL
+            IF current.data == target THEN
+                RETURN TRUE
+            END IF
+            SET current = current.next
+        END WHILE
+        RETURN FALSE
+    END METHOD
+
+    // Removes the first occurrence of a specific value
+    METHOD Delete(target)
+        IF head IS NULL THEN RETURN
+
+        // Case 1: The value is at the head
+        IF head.data == target THEN
+            SET head = head.next
+            RETURN
+        END IF
+
+        // Case 2: Search for the node before the target
+        SET current = head
+        WHILE current.next IS NOT NULL AND current.next.data != target
+            SET current = current.next
+        END WHILE
+
+        // If found, skip the target node
+        IF current.next IS NOT NULL THEN
+            SET current.next = current.next.next
+        END IF
+    END METHOD
+END CLASS
