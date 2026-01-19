@@ -6,15 +6,30 @@ int main() {
     unordered_map<char, vector<char>> graph;
 
     // Build the graph
+    //FUXZ
+    //ABCDEGHIJKLMNOPQRSTVWY
     graph['A'] = {'B', 'E'};
-    graph['B'] = {'C','D'};
-    graph['C'] = {'H'};
-    graph['D'] = {'H'};
-    graph['H'] = {'I'};
-    graph['E'] = {'F','G'};
-    graph['G'] = {'I'};
-    graph['I'] = {'L','J'};
-    graph['J'] = {'K'};
+    graph['B'] = {'A', 'C'};
+    graph['C'] = {'B', 'D'};
+    graph['D'] = {'C', 'E','H'};
+    graph['E'] = {'A', 'G','D'};
+    graph['G'] = {'F', 'E','J'};
+    graph['H'] = {'D', 'I'};
+    graph['I'] = {'H', 'J'};
+    graph['J'] = {'G', 'I','K'};
+    graph['K'] = {'J', 'L'};
+    graph['L'] = {'K', 'N','O'};
+    graph['M'] = {'I', 'N'};
+    graph['N'] = {'B', 'E'};
+    graph['O'] = {'B', 'E'};
+    graph['P'] = {'B', 'E'};
+    graph['Q'] = {'B', 'E'};
+    graph['R'] = {'B', 'E'};
+    graph['S'] = {'B', 'E'};
+    graph['T'] = {'B', 'E'};
+    graph['V'] = {'B', 'E'};
+    graph['X'] = {'B', 'E'};
+    graph['Z'] = {'B', 'E'};
 
     char start = 'A';
     char target = 'L';
