@@ -73,6 +73,6 @@ int main() {
     runTest({3, 1}, 3, 0);                    // small array, target at start
     runTest({5, 1, 2, 3, 4}, 1, 1);            // rotated at index 1
     runTest({5, 1, 2, 3, 4}, 5, 0);            // target at pivot
-
+    //end of code
     return 0;
 }
