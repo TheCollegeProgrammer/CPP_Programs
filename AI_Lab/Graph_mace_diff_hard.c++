@@ -15,24 +15,25 @@ int main() {
     graph['E'] = {'A', 'G','D'};
     graph['G'] = {'F', 'E','J'};
     graph['H'] = {'D', 'I'};
-    graph['I'] = {'H', 'J'};
+    graph['I'] = {'H', 'J','M'};
     graph['J'] = {'G', 'I','K'};
     graph['K'] = {'J', 'L'};
     graph['L'] = {'K', 'N','O'};
     graph['M'] = {'I', 'N'};
-    graph['N'] = {'B', 'E'};
-    graph['O'] = {'B', 'E'};
-    graph['P'] = {'B', 'E'};
-    graph['Q'] = {'B', 'E'};
-    graph['R'] = {'B', 'E'};
-    graph['S'] = {'B', 'E'};
-    graph['T'] = {'B', 'E'};
-    graph['V'] = {'B', 'E'};
-    graph['X'] = {'B', 'E'};
-    graph['Z'] = {'B', 'E'};
+    graph['N'] = {'L', 'M','Q'};
+    graph['O'] = {'L', 'P'};
+    graph['P'] = {'S', 'O','R'};
+    graph['Q'] = {'S', 'N'};
+    graph['R'] = {'P', 'U','V'};
+    graph['S'] = {'Q', 'P','T'};
+    graph['T'] = {'S', 'V'};
+    graph['V'] = {'R', 'T','W'};
+    graph['W'] = {'X','Y','V'};
+    graph['X'] = {'W'};
+    graph['Z'] = {'Y'};
 
     char start = 'A';
-    char target = 'L';
+    char target = 'Y';
 
     // BFS structures
     queue<char> q;
@@ -76,13 +77,13 @@ int main() {
 
         reverse(path.begin(), path.end());
 
-        cout << "Shortest path from A to H: ";
+        cout << "Shortest path from A to Z: ";
         for (char ch : path) {
             cout << ch << " ";
         }
         cout << endl;
     } else {
-        cout << "No path found from A to H\n";
+        cout << "No path found from A to Z\n";
     }
 
     return 0;
