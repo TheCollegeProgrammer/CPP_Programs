@@ -26,6 +26,6 @@ int main() {
     cout << sol.isSubsequence("", "ahbgdc") << endl;    // true (1)
     cout << sol.isSubsequence("abc", "") << endl;       // false (0)
     cout << sol.isSubsequence("aaaa", "aaa") << endl;   // false (0)
-
+    // end of code
     return 0;
 }
