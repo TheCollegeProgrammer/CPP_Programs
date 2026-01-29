@@ -57,6 +57,6 @@ int main() {
     int k4 = 5;
     cout << "Test Case 4 Output: " << sol.maxOperations(nums4, k4) << endl;
     // Expected: 0
-
+    //end of code
     return 0;
 }
