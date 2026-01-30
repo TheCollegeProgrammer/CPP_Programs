@@ -52,6 +52,6 @@ int main() {
     int k4 = 1;
     cout << "Test Case 4 Output: "
          << sol.findMaxAverage(nums4, k4) << endl;
-
+    //end of code
     return 0;
 }
