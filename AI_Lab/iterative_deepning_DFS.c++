@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Depth Limited DFS
 bool DLS(int node, int target, int depth, vector<vector<int>>& graph) {
     if (node == target)
         return true;
@@ -16,7 +15,6 @@ bool DLS(int node, int target, int depth, vector<vector<int>>& graph) {
     return false;
 }
 
-// Iterative Deepening DFS
 bool IDDFS(int start, int target, int maxDepth, vector<vector<int>>& graph) {
     for (int depth = 0; depth <= maxDepth; depth++) {
         if (DLS(start, target, depth, graph)) {
@@ -28,10 +26,9 @@ bool IDDFS(int start, int target, int maxDepth, vector<vector<int>>& graph) {
 }
 
 int main() {
-    int n = 7; // number of nodes
+    int n = 7; 
     vector<vector<int>> graph(n);
 
-    // Example graph
     graph[0] = {1, 2};
     graph[1] = {3, 4};
     graph[2] = {5, 6};
