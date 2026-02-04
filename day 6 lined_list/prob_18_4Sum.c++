@@ -50,6 +50,6 @@ int main() {
         for (int x : quad) cout << x << " ";
         cout << "]\n";
     }
-
+    //end of code
     return 0;
 }
