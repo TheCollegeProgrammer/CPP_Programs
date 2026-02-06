@@ -39,6 +39,5 @@ int main() {
     for (int x : nums1) {
         cout << x << " ";
     }
-    // end of code
     return 0;
 }
