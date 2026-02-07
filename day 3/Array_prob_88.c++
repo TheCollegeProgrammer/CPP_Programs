@@ -35,7 +35,6 @@ int main() {
 
     merge(nums1, m, nums2, n);
 
-    // Print result
     for (int x : nums1) {
         cout << x << " ";
     }
