@@ -41,6 +41,5 @@ int main() {
     printf("Total comparisons = %d\n", totalComparisons);
     printf("Average comparisons = %.2f\n", avgComparisons);
     printf("log2(n) = %.2f\n", log2(n));
-    //end of program
     return 0;
 }
