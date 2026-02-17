@@ -43,4 +43,4 @@ int main() {
     printf("log2(n) = %.2f\n", log2(n));
     return 0;
 }
-//end
+//end..
