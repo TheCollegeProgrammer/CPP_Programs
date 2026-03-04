@@ -66,7 +66,7 @@ void knapsack(struct Item arr[], int n, int capacity) {
 int main() {
 
     int n, capacity;
-// comment
+// comment ...
     printf("Enter number of items: ");
     scanf("%d",&n);
 
