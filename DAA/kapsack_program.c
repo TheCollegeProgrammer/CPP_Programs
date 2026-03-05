@@ -66,7 +66,7 @@ void knapsack(struct Item arr[], int n, int capacity) {
 int main() {
 
     int n, capacity;
-// comment ...
+
     printf("Enter number of items: ");
     scanf("%d",&n);
 
@@ -84,19 +84,19 @@ int main() {
 
     struct Item temp[n];
 
-    /* Case 1: Maximum Profit */
+    //maximum profit
     for(int i=0;i<n;i++) temp[i] = arr[i];
     sortByProfit(temp,n);
     printf("\nCase 1: Selection by Maximum Profit\n");
     knapsack(temp,n,capacity);
 
-    /* Case 2: Maximum Weight */
+    //Maximum Weight
     for(int i=0;i<n;i++) temp[i] = arr[i];
     sortByWeight(temp,n);
     printf("\nCase 2: Selection by Maximum Weight\n");
     knapsack(temp,n,capacity);
 
-    /* Case 3: Profit/Weight Ratio */
+    //Profit/Weight Ratio 
     for(int i=0;i<n;i++) temp[i] = arr[i];
     sortByRatio(temp,n);
     printf("\nCase 3: Selection by Profit/Weight Ratio\n");
