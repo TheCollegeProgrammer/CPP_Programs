@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define N 8
+#define N 8 
 
 int board[N][N];
 int solutionCount = 0;
