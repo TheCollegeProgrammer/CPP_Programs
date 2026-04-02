@@ -23,6 +23,20 @@ void Insert_At_End(Node* &head, int val){
     temp->next = newNode;
 }
 
+Node* Reverse(Node* head){
+    Node* curr = head;
+    Node* next = NULL;
+    Node* prev = NULL;
+
+    while(curr != NULL){
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+
 void printList(Node* head){
     Node* temp = head;
     while(temp != NULL){
@@ -39,6 +53,7 @@ int main(){
     Insert_At_End(head, 3);
 
     printList(head);
-
+    head = Reverse(head);
+    printList(head);
     
 }
