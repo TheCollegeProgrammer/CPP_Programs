@@ -49,7 +49,7 @@ void Reverse(Node* &head){
     }
     head = prev;
 }
-
+// comment
 bool Check_Palindrom(Node* head){
     if(head == NULL || head->next == NULL) return true;
 
