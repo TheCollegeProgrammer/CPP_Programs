@@ -21,7 +21,6 @@ bool isValid(string s){
             }
         }
     }
-// changes
     return st.empty(); // stack empty hona chahiye
 }
 
