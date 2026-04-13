@@ -15,7 +15,7 @@ void printBoard() {
     cout << "\n";
 }
 
-// Evaluate board
+// Evaluate board....
 int evaluate() {
     for(int i = 0; i < 3; i++) {
         if(board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
